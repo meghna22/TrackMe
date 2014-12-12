@@ -1,0 +1,19 @@
+<ion-view title="{{ track.getDescription() }}">
+    <ion-content class="has-header">
+        <div class="card">
+            <div class="item item-text-wrap">
+                <p style="font-size: 16px; line-height: 18px;color:#888;"><i class="icon ion-android-clock"></i> Start: {{ track.getStartTime() | date:'medium'}}</p>
+                <p style="font-size: 16px; line-height: 18px;color:#888;"><i class="icon ion-android-clock"></i> End: {{ track.getEndTime() | date:'medium'}}</p>
+
+                <p style="font-size: 16px; line-height: 18px;color:#888;"><i class="icon ion-android-earth"></i> Distance Travelled: {{ track.getDistance() | number:2}} km</p>
+                <p style="font-size: 16px; line-height: 18px;color:#888;"><i class="icon ion-android-timer"></i> Duration: {{ track.getDuration() | number:1}} min</p>
+                <p style="font-size: 16px; line-height: 18px;color:#888;"><i class="icon ion-ios7-location"></i> Samples: {{ track.numPoints() }}</p>
+
+            </div>
+        </div>
+        <!--<div style="height:500px;margin-bottom:1em;margin-top:0;padding:0;width:100%;" map-dynamic coords={{[p1.getLat(),p1.getLong(),p2.getLat(),p2.getLong()]}}>-->
+
+        <!--</div>-->
+        <div id="map" data-tap-disabled="true" style="width:100%;height:500px"></div>
+    </ion-content>
+</ion-view>

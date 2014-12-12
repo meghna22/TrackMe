@@ -1,0 +1,13 @@
+<ion-view title="Tracks">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item ng-repeat="track in tracks" href="#/app/tracklist/{{track.getId()}}">
+          {{track.getDescription()}} - {{ track.getDuration() | number:1}} min - {{ track.getDistance() | number:1 }} km
+          <p>Sample Points: {{ track.numPoints() }}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
